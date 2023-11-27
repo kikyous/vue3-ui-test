@@ -3,7 +3,9 @@
     <div class="px-4">
       <el-form label-position="left" label-width="100px">
         <el-form-item label="选择在线测试">
-          <el-input />
+          <el-select class="w-full" placeholder="请选择分组方案">
+            <el-option >1</el-option>
+          </el-select>
         </el-form-item>
         <el-form-item label="标题">
           <el-input />
@@ -105,29 +107,38 @@
             </div>
 
           </div>
-          <a href="" class="underline-none">
+          <a href="" class="decoration-none text-[#20BEC8]">
             添加
           </a>
         </el-form-item>
         <el-divider />
         <el-form-item label="成绩比例">
-          <el-slider class="w-150!" v-model="ruleForm.percent" show-input :marks="marks" />
+          <div>
+            <el-slider class="w-150!" v-model="ruleForm.percent" show-input :marks="marks" />
+            <div class="mt-4 text-[#737373]">(总成绩比例不能超过100%，剩余11.4%)</div>
+          </div>
         </el-form-item>
         <el-form-item label="完成指标">
-          <el-radio-group class="ml-4" v-model="ruleForm.hasZb">
-            <el-radio label="1" size="large">无</el-radio>
-            <el-radio label="2" size="large">有</el-radio>
-            <el-select placeholder="请选择" v-model="ruleForm.zb">
-              <el-option label="提交作业" value="1">提交作业</el-option>
-            </el-select>
-          </el-radio-group>
+          <div>
+            <el-radio-group class="" v-model="ruleForm.hasZb">
+              <el-radio label="1" size="large">无</el-radio>
+              <el-radio label="2" size="large">有</el-radio>
+              <el-select placeholder="请选择" v-model="ruleForm.zb">
+                <el-option label="提交作业" value="1">提交作业</el-option>
+              </el-select>
+            </el-radio-group>
+            <div class="ml-17 mt-1 flex w-69.75 pt-1 flex-col justify-center items-start bg-[#E9E9E9] rounded-sm p-3">
+              设置「完成指标」后，学生需达到条件才算完成。该活动将自动纳入学习分析的完成度统计，并作为学生学习进度的分母条件
+            </div>
+          </div>
+
         </el-form-item>
       </el-form>
     </div>
     <template #footer>
       <span class="dialog-footer flex justify-center">
-        <el-button type="primary" > 保存 </el-button>
-        <el-button >取消</el-button>
+        <el-button type="primary"> 保存 </el-button>
+        <el-button>取消</el-button>
       </span>
     </template>
   </el-dialog>
@@ -148,7 +159,7 @@ const ruleForm = reactive({
   submitCloseTime: '',
   delivery: false,
   type: 'personal',
-  percent: 0,
+  percent: 10,
   hasZb: '1',
   zb: ''
 })
@@ -181,4 +192,5 @@ table.blueTable thead th {
   font-size: 15px;
   color: #000000;
   font-weight: normal;
-}</style>
+}
+</style>
