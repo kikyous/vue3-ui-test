@@ -21,7 +21,7 @@
           </el-radio-group>
         </el-form-item>
         <el-form-item label="评分方式">
-          <div class="box">
+          <div class="">
             <table class="blueTable radius-1">
               <thead>
                 <tr>
