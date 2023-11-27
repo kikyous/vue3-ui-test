@@ -17,7 +17,6 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
 import type {
-  AntTreeNodeDragEnterEvent,
   AntTreeNodeDropEvent,
   TreeProps,
 } from 'ant-design-vue/es/tree';
