@@ -1,5 +1,5 @@
 <template>
-  <el-dialog model-value="true" title="新增作业">
+  <el-dialog model-value="true" title="新增作业" width="70%">
     <div class="px-4">
       <el-form label-position="left" label-width="100px">
         <el-form-item label="选择在线测试">
