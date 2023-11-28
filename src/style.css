@@ -1,5 +1,10 @@
 :root {
   --el-color-primary: #20BEC8;
+
+  .el-button {
+    --el-button-hover-border-color: #068894;
+    --el-button-hover-bg-color:#068894;
+  }
 }
 .el-dialog__header {
   padding: var(--el-dialog-padding-primary) !important;

@@ -138,7 +138,7 @@
     <template #footer>
       <span class="dialog-footer flex justify-center">
         <el-button type="primary"> 保存 </el-button>
-        <el-button>取消</el-button>
+        <el-button type="info">取消</el-button>
       </span>
     </template>
   </el-dialog>
