@@ -3,8 +3,8 @@
     <div class="px-4">
       <el-form label-position="left" label-width="100px">
         <el-form-item label="选择在线测试">
-          <el-select class="w-full" placeholder="请选择分组方案">
-            <el-option >1</el-option>
+          <el-select v-model="ruleForm.groupSet" class="w-full" placeholder="请选择分组方案">
+            <el-option label="1">1</el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="标题">
@@ -161,7 +161,8 @@ const ruleForm = reactive({
   type: 'personal',
   percent: 10,
   hasZb: '1',
-  zb: ''
+  zb: '',
+  groupSet: ''
 })
 </script>
 
